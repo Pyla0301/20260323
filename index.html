@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js sketch</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        overflow: hidden; /* 避免全螢幕時出現捲軸 */
+      }
+      /* 設定 iframe 樣式，充滿整個視窗並置於底層 */
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        z-index: 0;
+      }
+      /* 讓 p5 畫布疊在 iframe 上層，並且允許滑鼠事件穿透 */
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: none;
+      }
+    </style>
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <iframe src="https://www.et.tku.edu.tw"></iframe>
+  </body>
+</html>
